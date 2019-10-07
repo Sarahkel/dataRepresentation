@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Library>
+	<Book category="Cooking">
+		<ISBN>978-0241229781</ISBN>
+		<title>The Science of Cooking: Every Question Answered to Perfect your Cooking</title>
+		<author>Dr. Stuart Farrimond</author>
+	</Book>
+	<Book category="Cooking">
+		<ISBN>978-1444780789</ISBN>
+		<title>Gordon Ramsay's Ultimate Home Cooking</title>
+		<author>Gordon Ramsay</author>
+	</Book>
+	<Book category="Technical">
+		<ISBN>978-1454923312</ISBN>
+		<title>Code Your Own Games!: 20 Games to Create with Scratch</title>
+		<author>Max Wainewright</author>
+	</Book>
+	<Book category="Technical">
+		<ISBN>978-1406366846</ISBN>
+		<title>Get Coding! Learn HTML, CSS, and JavaScript and Build a Website, App, and Game</title>
+		<author>Young Rewired State</author>
+	</Book>
+</Library>
