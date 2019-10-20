@@ -24,6 +24,37 @@
         document.getElementById('doCreateButton').style.display="none"
         document.getElementById('doUpdateButton').style.display="block"
     }
+    function doCreate(){
+        var form = document.getElementsById("createUpdateForm")
+
+        var car = {}
+        car.reg = form.querySelector('input[name="reg"]').value
+        car.make = form.querySelector('select[name="make"]').value
+        car.model = form.querySelector('input[name="model"]').value
+        car.price = form.querySelector('input[name="price"]').value
+        console.log(JSON.stringify(car))
+
+        clearForm()
+        showViewAll()
+    }
+    function showViewAll(){
+        document.getElementById('showCreateButton').style.display="block"
+        document.getElementById('carTable').style.display="block"
+        document.getElementById('createUpdateForm').style.display="none"
+        document.getElementById('createLabel').style.display="none"
+        document.getElementById('updateLabel').style.display="none"
+        document.getElementById('doCreateButton').style.display="none"
+        document.getElementById('doUpdateButton').style.display="none"
+    }
+    funcion clearForm(){
+        var form = document.getElementsById("createUpdateForm")
+
+        form.querySelector('input[name="reg"]').disabled = false
+        form.querySelector('input[name="reg"]').value = ''
+        form.querySelector('select[name="make"]').value = ''
+        form.querySelector('input[name="model"]').value = ''
+        form.querySelector('input[name="price"]').value = ''
+    }
 
     </script>
 </head>
@@ -82,7 +113,7 @@
     Model <input type="text" name="model" class="form-control"><br/>
     Price <input type="number" name="price" class="form-control"><br/>
 
-    <span><button class="btn btn-success" id="doCreateButton">Create</button></span>
+    <span><button class="btn btn-success" id="doCreateButton" onclick="doCreate()">Create</button></span>
     <span><button class="btn btn-info" id="doUpdateButton">Update</button></span>
 
 </div>
