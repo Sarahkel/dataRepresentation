@@ -1,13 +1,19 @@
 <html>
 <head>
+    <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
     <title>View cars</title>
 </head>
 <body>
 <h1>Cars</h1>
-<div><button>Create</button></div>
+<div><button class="btn btn-success">Create</button></div>
+<br/>
 <div>
     <h2>All Cars</h2>
-    <table border="1">
+    <br/>
+    <table class="table">
         <tr>
             <th>reg</th>
             <th>make</th>
@@ -21,41 +27,42 @@
             <td>Ford</td>
             <td>Modeo</td>
             <td>25,000</td>
-            <td><button>update</button></td>
-            <td><button>delete</button></td>
+            <td><button class="btn btn-info">update</button></td>
+            <td><button class="btn btn-danger">delete</button></td>
         </tr>
         <tr>
             <td>123 MO 456</td>
             <td>Kia</td>
             <td>Ceed</td>
             <td>56,000</td>
-            <td><button>update</button></td>
-            <td><button>delete</button></td>
+            <td><button class="btn btn-info">update</button></td>
+            <td><button class="btn btn-danger">delete</button></td>
         </tr>
         <tr>
             <td>123 MO 456</td>
             <td>Opel</td>
             <td>Astra</td>
             <td>44,000</td>
-            <td><button>update</button></td>
-            <td><button>delete</button></td>
+            <td><button class="btn btn-info">update</button></td>
+            <td><button class="btn btn-danger">delete</button></td>
         </tr>
     </table>
+    <br/>
 </div>
-<div>
+<div class="form-group">
     <h2><span>Create a</span><span>Update this</span> Car</h2>
 
-    Reg <input type="text"name="reg"><br/>
-    Make <select name="make">
+    Reg <input type="text"name="reg" class="form-control"><br/>
+    Make <select name="make" class="form-control">
         <option value="Ford">Ford</option>
         <option value="Kia">Kia</option>
         <option value="Opel">Opel</option>
         </select><br/>
-    Model <input type="text" name="model"><br/>
-    Price <input type="number" name="price"><br/>
+    Model <input type="text" name="model" class="form-control"><br/>
+    Price <input type="number" name="price" class="form-control"><br/>
 
-    <span><button>Create</button></span>
-    <span><button>Update</button></span>
+    <span><button class="btn btn-success">Create</button></span>
+    <span><button class="btn btn-info">Update</button></span>
 
 </div>
 </body>
