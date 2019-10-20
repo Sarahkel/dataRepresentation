@@ -5,15 +5,26 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
     crossorigin="anonymous">
     <title>View cars</title>
+    <script>
+    function showCreate() {
+        document.getElementById('showCreateButton').style.display="none"
+        document.getElementById('carTable').style.display="none"
+        document.getElementById('createUpdateForm').style.display="block"
+        document.getElementById('createLabel').style.display="inline"
+        document.getElementById('updateLabel').style.display="none"
+        document.getElementById('doCreateButton').style.display="block"
+        document.getElementById('doUpdateButton').style.display="none"
+    }
+    </script>
 </head>
 <body>
 <h1>Cars</h1>
-<div><button class="btn btn-success">Create</button></div>
+<div><button class="btn btn-success" id="showCreateButton" onclick="showCreate()">Create</button></div>
 <br/>
 <div>
     <h2>All Cars</h2>
     <br/>
-    <table class="table">
+    <table class="table" id="carTable">
         <tr>
             <th>reg</th>
             <th>make</th>
@@ -49,8 +60,8 @@
     </table>
     <br/>
 </div>
-<div class="form-group">
-    <h2><span>Create a</span><span>Update this</span> Car</h2>
+<div class="form-group" id='createUpdateForm' style="display: none">
+    <h2><span id="createLabel">Create a</span><span id="updateLabel">Update this</span> Car</h2>
 
     Reg <input type="text"name="reg" class="form-control"><br/>
     Make <select name="make" class="form-control">
@@ -61,8 +72,8 @@
     Model <input type="text" name="model" class="form-control"><br/>
     Price <input type="number" name="price" class="form-control"><br/>
 
-    <span><button class="btn btn-success">Create</button></span>
-    <span><button class="btn btn-info">Update</button></span>
+    <span><button class="btn btn-success" id="doCreateButton">Create</button></span>
+    <span><button class="btn btn-info" id="doUpdateButton">Update</button></span>
 
 </div>
 </body>
